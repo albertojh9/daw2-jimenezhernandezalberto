@@ -14,7 +14,7 @@ let acertado = false;
 
 // Bucle principal
 while (intentos < INTENTOS_MAXIMOS && !acertado) {
-    let numeroUsuario = parseInt(prompt("Introduce un número (0 - " + VALOR_MAXIMO + "):"));
+    let numeroUsuario = Number(prompt("Introduce un número (0 - " + VALOR_MAXIMO + "):"));
     
     // Contamos el intento siempre
     intentos++;
