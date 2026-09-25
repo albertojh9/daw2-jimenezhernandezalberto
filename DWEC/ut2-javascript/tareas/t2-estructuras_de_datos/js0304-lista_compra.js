@@ -6,17 +6,12 @@ const listaCompra = [];
 console.log("--- LISTA DE LA COMPRA ---");
 console.log("Introduce elementos uno a uno. Deja la casilla vacía y pulsa Enter para finalizar.\n");
 
-while (true) {
-  // Pedimos el nombre del artículo directamente 
-  const articulo = prompt("Añade un artículo: ");
+//Pedimos el primer artículo y mantenemos el bucle mientras NO sea una cadena vacía
+let articulo = prompt("Añade un artículo: ");
 
-  // Si introduce una cadena vacía (pulsa Enter directamente), salimos del bucle
-  if (articulo === "") {
-    break;
-  }
-
-  // Comprobamos si el artículo ya existe en la lista (sin importar mayúsculas/minúsculas)
-  const existe = listaCompra.some(item => item.toLowerCase() === articulo.toLowerCase());
+while (articulo !== "") {
+  // Comprobamos si existe convirtiendo la búsqueda a minúsculas
+  const existe = listaCompra.map(i => i.toLowerCase()).includes(articulo.toLowerCase());
 
   if (existe) {
     console.log(`El artículo "${articulo}" ya está en la lista.\n`);
@@ -24,10 +19,13 @@ while (true) {
     listaCompra.push(articulo);
     console.log(`"${articulo}" añadido a la lista.\n`);
   }
+
+  // Pedimos el siguiente artículo para la próxima iteración del bucle
+  articulo = prompt("Añade un artículo: ");
 }
 
-// Ordenamos la lista en orden alfabético
-listaCompra.sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' }));
+// Ordena alfabéticamente distinguiendo entre mayúsculas y minúsculas
+listaCompra.sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'case' }));
 
 // Mostramos los resultados
 console.log("\n--- TU LISTA DE LA COMPRA ---");
