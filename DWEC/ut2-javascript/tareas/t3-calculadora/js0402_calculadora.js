@@ -36,6 +36,7 @@ function menu() {
         break;
       case "/":
         const divisor = Number(prompt("Número a dividir: "));
+  
         if (divisor !== 0) pantalla /= divisor;
         else console.log("No se puede dividir entre 0");
         break;

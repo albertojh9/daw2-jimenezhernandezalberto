@@ -37,9 +37,8 @@ class Cuenta {
     }
   }
 
-  /**
-   * Retira una cantidad de la cuenta. Si el saldo no llega, pasa a ser 0.
-   */
+  
+  // Retira una cantidad de la cuenta. Si el saldo no llega, pasa a ser 0.
   retirar(cantidad) {
     if (this._cantidad - cantidad < 0) {
       this._cantidad = 0;
@@ -48,9 +47,8 @@ class Cuenta {
     }
   }
 
-  /**
-   * Devuelve la representación en texto de la cuenta.
-   */
+
+  // Devuelve la representación en texto de la cuenta.
   toString() {
     return `Cuenta de ${this._titular} - Saldo: ${this._cantidad}€`;
   }
