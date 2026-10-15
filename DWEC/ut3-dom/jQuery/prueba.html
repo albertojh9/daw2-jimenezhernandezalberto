@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <input type="text" value="hola">
+    <input type="text" value="asad">    
+    <input type="text" value="333">
+    <input type="text" value="555">    
+</body>
+<script>
+    $('input')
+        .val('jquery')
+        .css('background-color', 'red')
+        .on('click', (evento) => {
+            $(evento.target).css('background-color', 'green');
+        });
+    const campos = document.querySelectorAll('input');
+    campos.forEach(e => {
+        e.value = 'jQuery';
+        e.style.backgroundColor = 'red';
+    });
+</script>
+</html>
