@@ -16,9 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Recorremos los botones para asignar el evento 
   botones.forEach(boton => {
-    // Ignoramos los botones vacíos de la barra superior (los de colores)
-    if (boton.textContent.trim() === '' && boton.id !== 'igual') return;
-
     // Usamos el objeto evento (evento) capturado al hacer clic
     boton.addEventListener('click', (evento) => {
       let valor = evento.target.textContent.trim();
