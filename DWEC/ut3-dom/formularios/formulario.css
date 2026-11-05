@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.campo {
+    margin-bottom: 10px;
+}
+
+#contenedor-ayuda {
+    margin-top: 20px;
+    border: 1px solid #000;
+    padding: 10px;
+}

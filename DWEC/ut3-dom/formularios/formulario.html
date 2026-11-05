@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- Vinculamos el archivo CSS externo -->
+    <link rel="stylesheet" href="formulario.css">
+</head>
+
+<body>
+
+    <h1>Formulario de Registro</h1>
+
+    <form id="miFormulario" novalidate>
+        <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" data-help="Introduce tu nombre (campo obligatorio)." data-valid="nombre">
+        </div>
+
+        <div class="campo">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" data-help="Introduce tus apellidos (campo obligatorio)." data-valid="apellidos">
+        </div>
+
+        <div class="campo">
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" data-help="Introduce un DNI válido de 8 dígitos y letra." data-valid="dni">
+        </div>
+
+        <div class="campo">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" data-help="Introduce un correo electrónico que contenga '@'." data-valid="email">
+        </div>
+
+        <div class="campo">
+            <label for="pass1">Contraseña:</label>
+            <input type="password" id="pass1" name="pass1" data-help="Introduce tu contraseña." data-valid="pass1">
+        </div>
+
+        <div class="campo">
+            <label for="pass2">Repetir Contraseña:</label>
+            <input type="password" id="pass2" name="pass2" data-help="Repite la contraseña para confirmar que coincide." data-valid="pass2">
+        </div>
+
+        <div class="campo">
+            <button type="submit">Aceptar</button>
+            <button type="reset" id="btnLimpiar">Limpiar</button>
+        </div>
+    </form>
+
+    <!-- Div para la ayuda y los mensajes de error -->
+    <div id="contenedor-ayuda">
+        <p id="texto-ayuda">Selecciona un campo para ver la ayuda.</p>
+    </div>
+
+    <!-- Carga del script principal como módulo -->
+    <script type="module" src="formulario.js"></script>
+</body>
+
+</html>
